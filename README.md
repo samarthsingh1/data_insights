@@ -1,2 +1,2 @@
 # data_insights
-Data 603 project
+Data 602 project
