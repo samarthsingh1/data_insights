@@ -95,18 +95,12 @@ Access the full report: [**Consumer Complaint Prediction Analysis**](https://doc
 
 <div align="center" style="background-color: #f7f7f7; padding: 20px; border-radius: 10px;">
     <img src="spider_chart.jpg" alt="Spider Chart" style="border-radius: 50%; box-shadow: 0px 4px 6px rgba(0,0,0,0.1);" />
-    <h1 style="font-family: Arial, sans-serif; color: #333;">Samarth Singh</h1>
-    <h3 style="color: #555;">Spider Chart</h3>
-    <p style="font-size: 16px; color: #666;">Spider Chart</p>
 </div>
 
 **Grouped Bar Chart**
 
 <div align="center" style="background-color: #f7f7f7; padding: 20px; border-radius: 10px;">
     <img src="comparision_graph.jpg" alt="comparision_graph" style="border-radius: 50%; box-shadow: 0px 4px 6px rgba(0,0,0,0.1);" />
-    <h1 style="font-family: Arial, sans-serif; color: #333;">Samarth Singh</h1>
-    <h3 style="color: #555;">comparision_graph</h3>
-    <p style="font-size: 16px; color: #666;">Comparision Grouped Bar Graph</p>
 </div>
 ---
 
