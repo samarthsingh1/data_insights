@@ -1,6 +1,6 @@
 # 🏦 Consumer Complaint Prediction: Logistic Regression vs. Random Forest
 
-This project compares the performance of **Logistic Regression** (linear model) and **Random Forest Classifier** (tree-based model) to predict consumer complaint outcomes. The dataset is sourced from the [Consumer Financial Protection Bureau (CFPB)](https://www.consumerfinance.gov/data-research/consumer-complaints/) and includes detailed complaint data. The analysis explores the impact of data preprocessing, feature selection, and class imbalance on model performance.
+This project compares the performance of **Logistic Regression** (linear model) and **Random Forest Classifier** (tree-based model) to predict consumer complaint outcomes. The dataset is sourced from the [Consumer Financial Protection Bureau (CFPB)](https://www.consumerfinance.gov/data-research/consumer-complaints/) and includes detailed complaint data. The analysis explores the impact of data preprocessing, feature selection, class imbalance, and feature scaling on model performance.
 
 ---
 
@@ -20,6 +20,7 @@ This project compares the performance of **Logistic Regression** (linear model) 
 Understanding and predicting consumer complaint outcomes is crucial for businesses and regulators. This project evaluates:
 - The **effectiveness of feature selection** in handling high-dimensional data.
 - The impact of **class imbalance solutions** on model fairness and accuracy.
+- The role of **feature scaling** in ensuring models perform optimally.
 - Comparative performance between **Logistic Regression** (linear) and **Random Forest Classifier** (non-linear).
 
 ---
@@ -44,16 +45,20 @@ Key statistics:
    - **One-Hot Encoding**: Applied to unordered categorical features like "Submitted Via."
 2. **Feature Selection**:
    - **LASSO Regularization**: Reduced dimensionality by penalizing less important features.
-3. **Class Imbalance Handling**:
+3. **Feature Scaling**:
+   - Standardized numerical features to a uniform scale for consistency across models.
+   - This ensured that features like "Complaint ID" or "Product Frequency" did not dominate model training due to larger magnitudes.
+4. **Class Imbalance Handling**:
    - **Random Undersampling**: Balanced the dataset to ensure fair model evaluation.
 
 ### **Models Implemented**
 1. **Logistic Regression**:
    - Baseline linear model.
    - Applied **Elastic Net Regularization** to balance bias and variance.
+   - Benefited from feature scaling to improve gradient-based optimization.
 2. **Random Forest Classifier**:
    - Tree-based ensemble model.
-   - Handles non-linear relationships effectively.
+   - Handled non-linear relationships effectively without requiring feature scaling.
 
 ---
 
@@ -76,25 +81,38 @@ Key statistics:
 ---
 
 ## 📊 Visualizations
-### **Key Visuals**
-1. **Confusion Matrix**:
-   - Random Forest displayed fewer misclassifications than Logistic Regression.
-2. **Feature Importance**:
-   - Random Forest heavily relied on the "Company" feature, while Logistic Regression distributed importance more evenly.
-3. **Grouped Bar Chart**:
-   - Compared key performance metrics, showcasing Random Forest’s superior performance.
-4. **Spider Chart**:
-   - Holistic visualization of all metrics, demonstrating Random Forest’s dominance.
+To explore all visualizations, including:
+1. **Confusion Matrices**: Compare model performance.
+2. **Feature Importance Analysis**: Analyze the contribution of features to model performance.
+3. **Grouped Bar Chart**: See metric-wise comparison between models.
+4. **Spider Chart**: Holistic view of model performance metrics.
 
-| Logistic Regression | Random Forest Classifier |
-|----------------------|--------------------------|
-| ![Logistic ROC](path/to/logistic-roc.png) | ![Random Forest ROC](path/to/rf-roc.png) |
+Access the full report: [**Consumer Complaint Prediction Analysis**](https://docs.google.com/document/d/1fhNJ6HpR4FvhLenCDKB26cYSfxljQU_RS_sj81zB2Lk/edit?usp=sharing)
 
+**Findings**:
+
+**Spider Chart**
+
+<div align="center" style="background-color: #f7f7f7; padding: 20px; border-radius: 10px;">
+    <img src="spider_chart.jpg" alt="Spider Chart" style="border-radius: 50%; box-shadow: 0px 4px 6px rgba(0,0,0,0.1);" />
+    <h1 style="font-family: Arial, sans-serif; color: #333;">Samarth Singh</h1>
+    <h3 style="color: #555;">Spider Chart</h3>
+    <p style="font-size: 16px; color: #666;">Spider Chart</p>
+</div>
+
+**Grouped Bar Chart**
+
+<div align="center" style="background-color: #f7f7f7; padding: 20px; border-radius: 10px;">
+    <img src="comparision_graph.jpg" alt="comparision_graph" style="border-radius: 50%; box-shadow: 0px 4px 6px rgba(0,0,0,0.1);" />
+    <h1 style="font-family: Arial, sans-serif; color: #333;">Samarth Singh</h1>
+    <h3 style="color: #555;">comparision_graph</h3>
+    <p style="font-size: 16px; color: #666;">Comparision Grouped Bar Graph</p>
+</div>
 ---
 
 ## 🧐 Conclusion
 - **Random Forest Classifier** is better suited for this dataset, as it captures complex non-linear relationships that Logistic Regression struggles with.
-- Addressing **class imbalance** and **feature selection** was crucial for improving fairness and model interpretability.
+- Addressing **class imbalance**, **feature selection**, and **scaling** were crucial for improving fairness and model interpretability.
 - Random Forest consistently outperformed Logistic Regression across all key metrics.
 
 ---
